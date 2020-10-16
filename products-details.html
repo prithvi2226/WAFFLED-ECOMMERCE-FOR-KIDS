@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Product Details - WAFFLED</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -12,7 +12,7 @@
 		<div class="container">
 			<div class="navbar">
 				<div class="logo">
-					<img src="waffled.png" width="125px">
+					<img src="Pictures/waffled.png" width="125px">
 				</div>
 			<nav>
 				<ul id="MenuItems">
@@ -23,8 +23,8 @@
 					<li><a href="">Account</a></li>
 				</ul>
 			</nav>
-				<img src="fs.png" width="30px" height="30px">
-				<img src="menu.png" class="menu-icon" onclick="menutoggle()">
+				<img src="Pictures/fs.png" width="30px" height="30px">
+				<img src="Pictures/menu.png" class="menu-icon" onclick="menutoggle()">
 			</div>
 		</div>
 
@@ -34,17 +34,17 @@
 	<div class="small-container single-product">
 		<div class="row">
 			<div class="col-2">
-				<img src="sg.jpg" width="100%" id="product-img">
+				<img src="Pictures/sg.jpg" width="100%" id="product-img">
 
 			    <div class="small-img-row">
 					<div class="small-img-col">
-						<img src="sg1.jpg" width="100%" class="small-img">
+						<img src="Pictures/sg1.jpg" width="100%" class="small-img">
 					</div>
 					<div class="small-img-col">
-						<img src="sg2.jpg" width="100%" class="small-img">
+						<img src="Pictures/sg2.jpg" width="100%" class="small-img">
 					</div>
 					<div class="small-img-col">
-						<img src="sg3.jpg" width="100%" class="small-img">
+						<img src="Pictures/sg3.jpg" width="100%" class="small-img">
 					</div>
 				</div>
 
@@ -90,7 +90,7 @@
 			
 		<div class="row">
 			<div class="col-4">
-				<img src="featured-1.jpg">
+				<img src="Pictures/featured-1.jpg">
 				<h4>Armani Junior Outfit</h4>
 				<div class="ratings">
 					<i class="fa fa-star" aria-hidden="true"></i>
@@ -102,7 +102,7 @@
 				<p>$124.00</p>
 			</div>
 			<div class="col-4">
-				<img src="featured-2.jpg">
+				<img src="Pictures/featured-2.jpg">
 				<h4>All Over Logo Print Polo</h4>
 				<div class="ratings">
 					<i class="fa fa-star" aria-hidden="true"></i>
@@ -114,7 +114,7 @@
 				<p>$150.00</p>
 			</div>
 			<div class="col-4">
-				<img src="featured-3.jpg">
+				<img src="Pictures/featured-3.jpg">
 				<h4>Dress (4-8 Years)</h4>
 				<div class="ratings">
 					<i class="fa fa-star" aria-hidden="true"></i>
@@ -126,7 +126,7 @@
 				<p>$165.00</p>
 			</div>
 			<div class="col-4">
-				<img src="featured-4.jpg">
+				<img src="Pictures/featured-4.jpg">
 				<h4>Newborn 3 Bibs + Pouch Set</h4>
 				<div class="ratings">
 					<i class="fa fa-star" aria-hidden="true"></i>
@@ -141,20 +141,20 @@
 			
 		</div>
 		
-<!---------------footer---------------->
+<!------------------------------footer---------------------------------->
 <div class="footer">
 	<div class="container">
 		<div class="row">
 			<div class="footer-col-1">
 				<h3>Download Our App</h3>
-				<p>Download App for Android and ios mobile phone</p>
+				<p>Download App for Android and IOS mobile phone</p>
 				<div class="app-logo">
-					<img src="appstore.png">
-					<img src="googleplay.png">
+					<img src="Pictures/appstore.png">
+					<img src="Pictures/googleplay.png">
 				</div>
 			</div>
 			<div class="footer-col-2">
-				<img src="waffled.png">
+				<img src="Pictures/waffled.png">
 				<p>Our Purpose Is To Sustainably Make the Pleasure and benefits of Products Accessible to the Children.</p>
 			</div>
 			<div class="footer-col-3">
@@ -172,7 +172,7 @@
 					<li>Facebook</li>
 					<li>Twitter</li>
 					<li>Instagram</li>
-					<li>Youtube</li>
+					<li>YouTube</li>
 				</ul>
 			</div>
 		</div>
@@ -180,6 +180,46 @@
 		<p class="Copyright">Copyright 2020 - XALAR CORP</p>
 	</div>
 </div>
+
+
+<!---------------js for toggle menu-------------->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else
+            {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+
+    <script>
+        var product-img = document.getElementById("product-img");
+        var small-img = document.getElementsByClassName("small-img");
+        
+        small-img[0].onclick = function()
+        {
+            product-img.src = small-img[0].src;
+        }
+        small-img[1].onclick = function()
+        {
+            product-img.src = small-img[1].src;
+        }
+        small-img[2].onclick = function()
+        {
+            product-img.src = small-img[2].src;
+        }
+        small-img[3].onclick = function()
+        {
+            product-img.src = small-img[3].src;
+        }
+    </script>
 
 </body>
 </html>
