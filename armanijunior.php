@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Product Details - WAFFLED</title>
 	<link rel="stylesheet" type="text/css" href="CSS/style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -12,47 +12,48 @@
 		<div class="container">
 			<div class="navbar">
 				<div class="logo">
-					<a href="waffled.html"><img src="Pictures/waffled.png" width="125px"></a>
+					<img src="Pictures/waffled.png" width="125px">
 				</div>
 			<nav>
 				<ul id="MenuItems">
-					<li><a href="waffled.html">Home</a></li>
-					<li><a href="products.html">Products</a></li>
-					<li><a href="">About</a></li>
-					<li><a href="">Contact</a></li>
+					<li><a href="waffled.php">Home</a></li>
+					<li><a href="products1.php">Products</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="Contact.html">Contact</a></li>
 					<li><a href="account.html">Account</a></li>
+					<li><a href="logout.php">LOGOUT</a></li>
 				</ul>
 			</nav>
-				<a href="cart.html"><img src="Pictures/fs.png" width="30px" height="30px"></a>
-				<a href="waffled.html"><img src="Pictures/menu.png" class="menu-icon" onclick="menutoggle()"></a>
+				<a href="cart.php"><img src="Pictures/fs.png" width="30px" height="30px"></a>
+				<img src="Pictures/menu.png" class="menu-icon" onclick="menutoggle()">
 			</div>
 		</div>
 
 
 <!-------------------- single product ------------------------->
-	
+
 	<div class="small-container single-product">
 		<div class="row">
 			<div class="col-2">
-				<img src="Pictures/sg.jpg" width="100%" id="product-img">
+				<img src="Pictures/featured-1.jpg" width="100%" id="product-img">
 
-			    <div class="small-img-row">
-					<div class="small-img-col">
-						<img src="Pictures/sg1.jpg" width="100%" class="small-img">
-					</div>
-					<div class="small-img-col">
-						<img src="Pictures/sg2.jpg" width="100%" class="small-img">
-					</div>
-					<div class="small-img-col">
-						<img src="Pictures/sg3.jpg" width="100%" class="small-img">
-					</div>
-				</div>
+			    <!div class="small-img-row">
+					<!div class="small-img-col">
+						<!img src="Pictures/sg1.jpg" width="100%" class="small-img">
+					<!/div>
+					<!div class="small-img-col">
+						<!img src="Pictures/sg2.jpg" width="100%" class="small-img">
+					<!/div>
+					<!div class="small-img-col">
+						<!img src="Pictures/sg3.jpg" width="100%" class="small-img">
+					</!div>
+				<!/div>
 
 			</div>
 			<div class="col-2">
 				<p>Home / T-Shirt</p>
-				<h1>MINI STRIPE BIG LOGO TEE (10-14 YEARS)</h1>
-				<h4>$100.00</h4>
+				<h1>ARMANI JUNIOR OUTFIT</h1>
+				<h4>$124.00</h4>
 				<select>
 					<option>14 yrs</option>
 					<option>13 yrs</option>
@@ -60,11 +61,13 @@
 					<option>11 yrs</option>
 					<option>10 yrs</option>
 				</select>
-				<input type="number" value="1">
-				<a href="cart.html" class="btn">Add To Cart</a>
+
+                     <button type="submit" class="btn btn-warning my-3" name="add">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+                             <input type='hidden' name='product_id' value='$productid'>
+
 				<h3>Product Details <i class="fa fa-indent"></i></h3>
 				<br>
-				<p>This Emporio Armani t-shirt features a large logo, stripe detailing and round neck.</p>
+				<p>This Emporio Armani outfit features a sleevless t-shirt and shorts made out of 100% cotton.</p>
 			</div>
 		</div>
 	</div>
@@ -87,11 +90,11 @@
 <!--------------------------products------------------->
 	<div class="small-container">
 
-			
+
 		<div class="row">
 			<div class="col-4">
-				<img src="Pictures/featured-1.jpg">
-				<h4>Armani Junior Outfit</h4>
+				<img src="Pictures/sg.jpg">
+				<h4>Mini Stripe Big Logo Tee (10-14 Years)</h4>
 				<div class="ratings">
 					<i class="fa fa-star" aria-hidden="true"></i>
 					<i class="fa fa-star" aria-hidden="true"></i>
@@ -99,7 +102,7 @@
 					<i class="fa fa-star" aria-hidden="true"></i>
 					<i class="fa fa-star-o" aria-hidden="true"></i>
 				</div>
-				<p>$124.00</p>
+				<p>$100.00</p>
 			</div>
 			<div class="col-4">
 				<img src="Pictures/featured-2.jpg">
@@ -137,10 +140,10 @@
 				</div>
 				<p>$185.00</p>
 			</div>
-			
-			
+
+
 		</div>
-		
+
 <!------------------------------footer---------------------------------->
 <div class="footer">
 	<div class="container">
@@ -185,7 +188,7 @@
 <!---------------js for toggle menu-------------->
     <script>
         var MenuItems = document.getElementById("MenuItems");
-        
+
         MenuItems.style.maxHeight = "0px";
         function menutoggle(){
             if(MenuItems.style.maxHeight == "0px")
@@ -198,13 +201,13 @@
             }
         }
     </script>
-    
+
 
         <!---js for product gallery----------->
     <script>
         var ProductImg = document.getElementById("product-img");
         var SmallImg = document.getElementsByClassName("small-img");
-        
+
         SmallImg[0].onclick = function()
         {
             ProductImg.src = SmallImg[0].src;
@@ -221,26 +224,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

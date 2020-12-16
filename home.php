@@ -1,3 +1,10 @@
+
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,23 +21,24 @@
 		<div class="container">
 		<div class="navbar">
 		<div class="logo">
-			<img src="Pictures/waffled.png" width="125px">
+			<a href=""><img src="Pictures/waffled.png" width="125px"></a>
 		</div>
 		<nav>
 			<ul id="MenuItems">
-				<li><a href="waffled.html">Home</a></li>
-				<li><a href="products.html">Products</a></li>
+				<li><a href="">Home</a></li>
+				<li><a href="products1.php">Products</a></li>
 				<li><a href="about.html">About</a></li>
-				<li><a href="Contact.html">Contact</a></li>
-				<li><a href="account.html">Account</a></li>
+				<li><a href="Contact.php">Contact</a></li>
+				<li><a href="account.php">Account</a></li>
+				<li><a href="logout.php">LOGOUT</a></li>
 			</ul>
 		</nav>
-		<a href="cart.html"><img src="Pictures/fs.png" width="30px" height="30px"></a>
+		<a href="cart.php"><img src="Pictures/fs.png" width="30px" height="30px"></a>
 		<img src="Pictures/menu.png" class="menu-icon" onclick="menutoggle()">
 	</div>
 	<div class="row">
 		<div class="col-2">
-			<h1>Because Your Children<br>Deserve The Best!:}</h1>
+			<h1>Welcome <?php echo $_SESSION['username']; ?> Here Because Your Children<br>Deserve The Best!:}</h1>
 			<p>Children are like wet cement.<br>Whatever falls on them makes an impression.</p>
 			<a href="" class="btn">Explore Now &#10147;</a>
 		</div>
@@ -116,7 +124,7 @@
 		<h2 class="title">Latest Products</h2>
 		<div class="row">
 			<div class="col-4">
-				<a href="Alloverlogoprintpolo.html"><img src="Pictures/latest1.jpg">
+				<a href="Alloverlogoprintpolo.php"><img src="Pictures/latest1.jpg">
 				<h4>All Over Logo Hoodie (4-8 YEARS)</h4></a>
 				<div class="ratings">
 					<i class="fa fa-star" aria-hidden="true"></i>
@@ -344,6 +352,29 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

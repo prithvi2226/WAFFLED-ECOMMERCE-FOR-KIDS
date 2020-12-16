@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Cart Details - WAFFLED</title>
+	<title>Register/Login - WAFFLED</title>
 	<link rel="stylesheet" type="text/css" href="CSS/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,14 +16,14 @@
 				</div>
 			<nav>
 				<ul id="MenuItems">
-					<li><a href="waffled.html">Home</a></li>
-					<li><a href="products.html">Products</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="Contact.html">Contact</a></li>
-					<li><a href="account.html">Account</a></li>
+					<li><a href="">Home</a></li>
+					<li><a href="">Products</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">Contact</a></li>
+					<li><a href="">Account</a></li>
 				</ul>
 			</nav>
-				<a href="cart.html"><img src="Pictures/fs.png" width="30px" height="30px"></a>
+				<a href=""><img src="Pictures/fs.png" width="30px" height="30px"></a>
 				<img src="Pictures/menu.png" class="menu-icon" onclick="menutoggle()">
 			</div>
 		</div>
@@ -44,17 +44,17 @@
 						<hr id="Indicator">
 					</div>
 
-					<form id="LoginForm">
-						<input type="text" placeholder="Username" pattern="[A-Za-z0-9]+" required>
-						<input type="password" placeholder="Password" pattern="[A-Za-z0-9]+" required>
+					<form id="LoginForm" action="validation.php" method="post">
+						<input type="text" name="user" placeholder="Username">
+						<input type="password" name="password" placeholder="Password">
 						<button type="submit" class="btn">Login</button>
 						<a href="">Forgot Password</a>
 					</form>
 
-					<form id="RegForm">
-						<input type="text" placeholder="Username" >
-						<input type="email" placeholder="Email">
-						<input type="password" placeholder="Password">
+					<form id="RegForm" action="registration.php" method="post">
+						<input type="text" name="user" placeholder="Username" >
+						<input type="email" name="email" placeholder="Email">
+						<input type="password" name="password" placeholder="Password">
 						
 						<button type="submit" class="btn">Register</button>
 					</form>

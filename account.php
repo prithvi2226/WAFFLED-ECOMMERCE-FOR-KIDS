@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,18 +22,19 @@
 				</div>
 			<nav>
 				<ul id="MenuItems">
-					<li><a href="waffled.html">Home</a></li>
-					<li><a href="products.html">Products</a></li>
+					<li><a href="home.php">Home</a></li>
+					<li><a href="products1.php">Products</a></li>
 					<li><a href="about.html">About</a></li>
-					<li><a href="Contact.html">Contact</a></li>
-					<li><a href="account.html">Account</a></li>
+					<li><a href="Contact.php">Contact</a></li>
+					<li><a href="account.php">Account</a></li>
+					<li><a href="logout.php">LOGOUT</a></li>
 				</ul>
 			</nav>
-				<a href="cart.html"><img src="Pictures/fs.png" width="30px" height="30px"></a>
+				<a href="cart.php"><img src="Pictures/fs.png" width="30px" height="30px"></a>
 				<img src="Pictures/menu.png" class="menu-icon" onclick="menutoggle()">
 			</div>
 		</div>
-<!---------------------------Account-Page--------------------------->
+<!---------------------------Account-Page---------------------------
 
 <div class="account-page">
 	<div class="container">
@@ -63,7 +70,8 @@
 		</div>
 	</div>
 </div>
-
+-->
+<h1>Welcome <?php echo $_SESSION['username']; ?> Here Because Your Children<br>Deserve The Best!:}</h1>
 
 		
 <!------------------------------footer---------------------------------->
